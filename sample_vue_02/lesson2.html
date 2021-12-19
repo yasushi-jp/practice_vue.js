@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <title>vie.js</title>
+  <link rel="stylesheet" href="css/mysyle.css">
+</head>
+<body>
+  <div id="app">
+    <h1>My Todos</h1>
+    <ul>
+      <!-- <li>{{ todos[0]}}</li>
+      <li>{{ todos[1]}}</li>
+      <li>{{ todos[2]}}</li> -->
+      <li v-for="todo in todos">{{ todo }}</li>
+    </ul>
+    <form>
+      <input type="text">
+      <input type="submit" value="add">
+    </form>
+
+  </div>
+  <script src="js/vue.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

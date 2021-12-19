@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <title>vie.js</title>
+  <link rel="stylesheet" href="css/mysyle.css">
+</head>
+<body>
+  <div id="app">
+    <h1>Response JSON Data</h1>
+
+    <ul>
+      <li>国：{{ json_data.country }}</li>
+      <li>IPアドレス：{{ json_data.query }}</li>
+    </ul>
+    <form>
+      <input type="button" value="submit" v-on:click="exec">
+    </form>
+  </div>
+  <script src="js/vue.min.js"></script>
+  <script src="js/axios.min.js"></script>
+  <script src="js/sample.js"></script>
+</body>
+</html>
