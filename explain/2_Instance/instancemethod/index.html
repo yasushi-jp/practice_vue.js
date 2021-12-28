@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <title>Hello World</title>
+    <script src="https://unpkg.com/vue"></script>
+  </head>
+  <body>
+    <p>初めての Vue.js</p>
+    <div id="app">
+      <ul>
+        <li v-for="item in items">
+          {{ item }}
+        </li>
+      </ul>
+      <form v-on:submit.prevent="addItem(input)">
+        <input type="text" v-model="input">
+        <button type="submit">追加</button>
+      </form>
+    </div>
+    <script src="js/main.js"></script>
+  </body>
+</html>

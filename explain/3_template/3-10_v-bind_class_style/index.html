@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <title>ToDo</title>
+    <link rel="stylesheet" href="css/main.css">
+    <script src="https://unpkg.com/vue"></script>
+  </head>
+  <body>
+    <div id="app">
+      <ul>
+        <li v-for="todo in todos">
+          <input type="checkbox" v-model="todo.completed">
+          <span
+            v-bind:class="{ done: todo.completed}"
+            v-bind:style="{'text-decoration': todo.completed ? 'line-through' : 'none' }">
+            {{ todo.text }}
+          </span>
+        </li>
+      </ul>
+      <div class="preview">
+        [
+        <div class="preview-pad" v-for="todo in todos">
+          {{ todo }}
+        </div>
+        ]
+      </div>
+    </div>
+    <script src="js/main.js"></script>
+  </body>
+</html>

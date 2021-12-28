@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <title>ToDo</title>
+    <link rel="stylesheet" href="css/main.css">
+    <script src="https://unpkg.com/vue"></script>
+  </head>
+  <body>
+    <div id="app">
+      <ul>
+        <li v-for="(todo, index) in todos">
+          <todo-item v-bind:todo="todo" v-on:remove="todos.splice(index, 1)"></todo-item>
+        </li>
+      </ul>
+      <div>
+        <input type="text" v-model="input">
+        <button type="button" v-on:click="addTodo">追加</button>
+      </div>
+    </div>
+    <script src="js/main.js">
+
+    </script>
+  </body>
+</html>

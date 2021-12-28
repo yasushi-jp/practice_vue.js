@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <title>ToDo</title>
+    <link rel="stylesheet" href="css/main.css">
+    <script src="https://unpkg.com/vue"></script>
+  </head>
+  <body>
+    <div id="app">
+      <a href="#" v-on:click.prevent="completeAll">すべてチェック</a>
+      <ul>
+        <li v-for="todo in todos">
+          <input type="checkbox"
+            v-bind:checked="todo.completed"
+            v-on:change="todo.completed = $event.target.checked">
+          <span>{{ todo.text }}</span>
+        </li>
+      </ul>
+      <div class="preview">
+        [
+        <div class="preview-pad" v-for="todo in todos">
+          {{ todo }}
+        </div>
+        ]
+      </div>
+    </div>
+    <script src="js/main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <title>ToDo</title>
+    <link rel="stylesheet" href="css/main.css">
+    <script src="https://unpkg.com/vue"></script>
+  </head>
+  <body>
+    <div id="app">
+      <ul>
+        <li v-for="(value, key) in vue">
+          {{ key }}: {{ value }}
+        </li>
+      </ul>
+    </div>
+    <script src="js/main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <title>vie.js</title>
+  <link rel="stylesheet" href="css/mysyle.css">
+</head>
+<body>
+  <div id="app-02">
+    <input type="text" v-model="message">
+    <div class="error" v-if="error.require">必須項目です。</div>
+    <div class="error" v-if="error.tooLong">長すぎます。</div>
+  </div>
+  <script src="js/vue.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

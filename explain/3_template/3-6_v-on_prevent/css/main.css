@@ -1,0 +1,24 @@
+ul,
+li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.done {
+  color: #888;
+}
+
+.red {
+  color: #EF476F;
+}
+
+.preview {
+  margin-top: 30px;
+  padding: 10px;
+  border-top: 1px solid #999;
+}
+
+.preview-pad {
+  margin-left: 2em;
+}
