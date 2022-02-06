@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="jp">
+  <head>
+    <meta charset="utf-8">
+    <title>Vue.js（computed）</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14"></script>
+  </head>
+  <body>
+    <div id="app">
+      <p>Vue.jsのバージョンは {{ Vue.version }} です。</p>
+      <p>firstName: <input type="text" v-model="firstName"></p>
+      <p>lastName: <input type="text" v-model="lastName"></p>
+      <p>Name: {{ getName }}</p>      <!-- （１） -->
+      <p>Name(old): {{ oldName }}</p> <!-- （２） -->
+      <p>Name(new): {{ newName }}</p> <!-- （３） -->
+    </div>
+    <script src="js/main.js"></script>
+  </body>
+</html>

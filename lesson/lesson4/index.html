@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="jp">
+  <head>
+    <meta charset="utf-8">
+    <title>Vue.jsでHello World!</title>
+    <link rel="stylesheet" href="css/main.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14"></script>
+  </head>
+  <body>
+    <div id="app">
+      <input type="text" v-model="input">
+      <button type="button" v-on:click="addTodo(input)">追加</button>
+      <ul>
+        <li v-for="(todo, index) in todos">
+          <div>
+            <input type="checkbox" v-model="todo.isDone">
+            <span>{{ todo.name }}</span>
+            <button type="button" v-on:click="deleteTodo(index)">削除</button>
+          </div>
+        </li>
+      </ul>
+
+    </div>
+    <script src="js/main.js"></script>
+  </body>
+</html>
